@@ -83,7 +83,7 @@ flutter:
   fonts:
     - family: DMSans
       fonts:
-        - asset: assets/fonts/DMSans-Regular.tt
+        - asset: fonts/DMSans-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

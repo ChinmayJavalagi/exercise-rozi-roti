@@ -10,6 +10,7 @@ class Screen1 extends StatefulWidget {
 
 class _Screen1State extends State<Screen1> {
   bool valuee = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +46,10 @@ class _Screen1State extends State<Screen1> {
                     filled: true,
                     hintText: 'Email',
                     prefixIcon: Visibility(
-                      child: Icon(Icons.mail_rounded, color: Colors.grey[500],),
+                      child: Icon(
+                        Icons.mail_rounded,
+                        color: Colors.grey[500],
+                      ),
                     ),
                     hintStyle: TextStyle(color: Colors.grey[500]),
                   ),
@@ -66,7 +70,10 @@ class _Screen1State extends State<Screen1> {
                     filled: true,
                     hintText: 'Password',
                     prefixIcon: Visibility(
-                      child: Icon(Icons.lock_rounded, color: Colors.grey[500],),
+                      child: Icon(
+                        Icons.lock_rounded,
+                        color: Colors.grey[500],
+                      ),
                     ),
                     suffixIcon: Icon(Icons.remove_red_eye_rounded),
                     hintStyle: TextStyle(color: Colors.grey[500]),
@@ -80,15 +87,15 @@ class _Screen1State extends State<Screen1> {
                     checkColor: Colors.black,
                     value: false,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6.0), // Change the radius here
+                      borderRadius:
+                      BorderRadius.circular(6.0), // Change the radius here
                     ),
-                    onChanged:  (value){
-                    },
+                    onChanged: (value) {},
                   ),
-                  Text('Remember me',style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15
-                  ),)
+                  Text(
+                    'Remember me',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  )
                 ],
               ),
               Padding(
@@ -123,7 +130,7 @@ class _Screen1State extends State<Screen1> {
                       color: Colors.black,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 10.0,right: 10),
+                      padding: const EdgeInsets.only(left: 10.0, right: 10),
                       child: Text('or continue with'),
                     ),
                     Container(
@@ -131,6 +138,70 @@ class _Screen1State extends State<Screen1> {
                       width: 80,
                       color: Colors.black,
                     )
+                  ],
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Container(
+                      padding: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.shade100),
+                        borderRadius: BorderRadius.circular(16),
+                        color: Colors.white,
+                      ),
+                      child: Image.asset(
+                        'images/fb.png',
+                        height: 30,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.shade100),
+                        borderRadius: BorderRadius.circular(16),
+                        color: Colors.white,
+                      ),
+                      child: Image.asset(
+                        'images/google.png',
+                        height: 40,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Container(
+                      padding: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.shade100),
+                        borderRadius: BorderRadius.circular(16),
+                        color: Colors.white,
+                      ),
+                      child: Image.asset(
+                        'images/apple.png',
+                        height: 30,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Already have an account?',
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                    SizedBox(width: 6,),
+                    Text('Sign In',style: TextStyle(fontWeight: FontWeight.bold),)
                   ],
                 ),
               )

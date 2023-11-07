@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 
+import '../components/custom_bottom_nav.dart';
 import '../components/profite_settings_tile.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -22,7 +23,7 @@ class ProfileScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Profile"),
+                  Text("Profile", style: TextStyle(fontFamily: "DMSans"),),
                   Icon(Icons.menu),
                 ],
               ),
@@ -64,38 +65,11 @@ class ProfileScreen extends StatelessWidget {
             SettingsTile(fieldName: 'Privacy Policy', iconData: Icons.lock, ),
             SettingsTile(fieldName: 'Help Center', iconData: Icons.help, ),
             SettingsTile(fieldName: 'Invite Friends', iconData: Icons.people, ),
-            SettingsTile(fieldName: 'Logout', iconData: Icons.logout, ),
+            SettingsTile(fieldName: 'Logout', iconData: Icons.logout, fieldColor: Colors.red,),
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Cart',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.assignment),
-            label: 'Orders',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance_wallet),
-            label: 'Wallet',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey,
-        onTap: _onItemTapped,
-      ),
+      bottomNavigationBar: CustomBottomNav(selectedIndex:4,),
     );
   }
 }
